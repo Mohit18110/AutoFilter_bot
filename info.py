@@ -151,7 +151,7 @@ NO_PORT = bool(environ.get('NO_PORT', False))
 APP_NAME = 'test2bot-613b307fbde2'
 if 'DYNO' in environ:
     ON_HEROKU = True
-    APP_NAME = environ.get('APP_NAME')
+    APP_NAME = environ.get('APP_NAME', 'test2bot-613b307fbde2')
 else:
     ON_HEROKU = False
 BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
